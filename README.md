@@ -3,7 +3,7 @@
 Smart Bets, Sharper Minds – for IE Students
 
 EdgePlay IE is an educational betting simulator for IE University students.  
-It lets users place simple football (soccer) bets with virtual money, see leaderboards, and explore team statistics in a safe, data-driven environment — **no real money involved**. :contentReference[oaicite:0]{index=0}  
+It lets users place simple football (soccer) bets with ***virtual money***, see leaderboards, and explore team statistics in a safe, data-driven environment — **no real money involved**. :contentReference[oaicite:0]{index=0}  
 
 ---
 
@@ -74,7 +74,7 @@ Planned (conceptual, from project design):
 
 ## Built With
 
-- **Language:** Python 3  
+- **Language:** Python 3  (pycharm was used as python IDE)
 - **Paradigm:** Object-Oriented Programming (`User`, `Match`, `Bet` classes) :contentReference[oaicite:10]{index=10}  
 - **Algorithms & Data Structures:**
   - Quicksort for user leaderboard by profit :contentReference[oaicite:11]{index=11}  
@@ -160,7 +160,7 @@ On the **home screen**, you can:
 
 * `0` – **Logout / Exit**
 
-After logging out, you can choose to log in again as another user or exit the program.
+After logging out, you can choose to log in again as another user or the same user (or you can create a totally new account) or exit the program.
 
 ---
 
@@ -221,7 +221,4 @@ You may adapt and reuse the code for learning, coursework, or personal projects.
 * **IE University classmates** – for feedback on the concept and user stories.
 
 ```
-
-If you’d like, I can also add a short section describing *exactly* how to launch your Rork AI GUI once you tell me what command or file you use to start it.
-::contentReference[oaicite:27]{index=27}
 ```
