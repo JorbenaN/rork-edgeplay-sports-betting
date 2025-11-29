@@ -1,5 +1,5 @@
 ```markdown
-# EdgePlay IE 🎯  
+# EdgePlay IE
 Smart Bets, Sharper Minds – for IE Students
 
 EdgePlay IE is an educational betting simulator for IE University students.  
@@ -49,19 +49,19 @@ A separate **GUI layer was prototyped with Rork AI**, which helped generate and 
 
 Current console prototype:
 
-- 🔐 **Login as demo users**  
+- **Login as demo users**  
   Predefined users (e.g. `masih`, `abdelaziz`, `ahmed`, `javier`, `nikolozi`, `zhenyang`) each start with a virtual balance.   
 
-- 🏆 **Leaderboard (Quicksort)**  
+- **Leaderboard (Quicksort)**  
   Users are sorted by total profit using a custom quicksort implementation.   
 
-- 🎲 **Place Bets (1X2)**  
+- **Place Bets (1X2)**  
   Users can place simple bets (Home win / Draw / Away win) on predefined matches with fixed odds and results. Bets update the user’s balance and betting history.   
 
-- 📜 **Betting History**  
+- **Betting History**  
   Each user can view all past bets, including stake, outcome chosen, and whether it was won or lost.   
 
-- 📊 **Team Statistics & Table (Selection Sort)**  
+- **Team Statistics & Table (Selection Sort)**  
   A league table is computed from demo stats and sorted by points using **selection sort**, breaking ties alphabetically by team name. :contentReference[oaicite:8]{index=8}  
 
 Planned (conceptual, from project design):
