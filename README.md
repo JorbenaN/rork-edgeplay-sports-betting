@@ -1,6 +1,4 @@
-Nice, we’ll definitely mention that. Here’s a **filled-in `README.md`** for your EdgePlay IE project, including that you used Rork AI for the GUI and code integration 👇
-
-````markdown
+```markdown
 # EdgePlay IE 🎯  
 Smart Bets, Sharper Minds – for IE Students
 
@@ -179,7 +177,6 @@ edgeplay-ie/
    └─ ADS - Edgeplay IE.pdf   # Original project specification & inception deck :contentReference[oaicite:23]{index=23}
 ```
 
-If you are using a separate GUI project generated with Rork AI, you can place it in a `/gui` folder and import these same modules there.
 
 ---
 
