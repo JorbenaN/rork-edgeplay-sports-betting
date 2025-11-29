@@ -205,7 +205,7 @@ You may adapt and reuse the code for learning, coursework, or personal projects.
 * **Team:** EdgePlay IE – ADS Project
 * **Main contributors:** Javier Barrera, Ahmed Rachad Belloum, Masih Ghadbeygi, Abdelaziz Moumen, Zhengyang Rao Xu, Nikolozi Jorbenadze
 
-(You can add your personal email and GitHub here, e.g.)
+
 
 * **Your Name:** Nikolozi Jorbenadze
 * **GitHub:** [@JorbenaN](https://github.com/your-username)
