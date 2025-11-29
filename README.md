@@ -1,318 +1,230 @@
-# Welcome to your Rork app
+Nice, we’ll definitely mention that. Here’s a **filled-in `README.md`** for your EdgePlay IE project, including that you used Rork AI for the GUI and code integration 👇
 
-## Project info
+````markdown
+# EdgePlay IE 🎯  
+Smart Bets, Sharper Minds – for IE Students
 
-This is a native cross-platform mobile app created with [Rork](https://rork.com)
+EdgePlay IE is an educational betting simulator for IE University students.  
+It lets users place simple football (soccer) bets with virtual money, see leaderboards, and explore team statistics in a safe, data-driven environment — **no real money involved**. :contentReference[oaicite:0]{index=0}  
 
-**Platform**: Native iOS & Android app, exportable to web
-**Framework**: Expo Router + React Native
+---
 
-## How can I edit this code?
+## Table of Contents
 
-There are several ways of editing your native mobile application.
+- [About the Project](#about-the-project)
+- [Features](#features)
+- [Built With](#built-with)
+- [Getting Started](#getting-started)
+  - [Prerequisites](#prerequisites)
+  - [Installation](#installation)
+- [Usage](#usage)
+- [Project Structure](#project-structure)
+- [Roadmap](#roadmap)
+- [License](#license)
+- [Contact](#contact)
+- [Acknowledgments](#acknowledgments)
 
-### **Use Rork**
+---
 
-Simply visit [rork.com](https://rork.com) and prompt to build your app with AI.
+## About the Project
 
-Changes made via Rork will be committed automatically to this GitHub repo.
+**EdgePlay IE: A Smart Betting and Community App for IE Students** is a prototype created for the ADS course. :contentReference[oaicite:1]{index=1}  
 
-Whenever you make a change in your local code editor and push it to GitHub, it will be also reflected in Rork.
+The main goals are to:
 
-### **Use your preferred code editor**
+- Help students **learn about probability, statistics, and responsible betting** in a controlled environment.
+- Provide a **single place** to see matches, odds, and simulated bets instead of jumping between multiple websites. :contentReference[oaicite:2]{index=2}  
+- Encourage **community and data literacy**, not gambling addiction or profit maximization. Bets are **simulated** and focused on learning. :contentReference[oaicite:3]{index=3}  
 
-If you want to work locally using your own code editor, you can clone this repo and push changes. Pushed changes will also be reflected in Rork.
+This repository contains the **core Python logic** for:
 
-If you are new to coding and unsure which editor to use, we recommend Cursor. If you're familiar with terminals, try Claude Code.
+- Managing users and balances
+- Simulating 1X2 bets on La Liga-style matches
+- Ranking users by profit (leaderboard)
+- Viewing basic team statistics
 
-The only requirement is having Node.js & Bun installed - [install Node.js with nvm](https://github.com/nvm-sh/nvm) and [install Bun](https://bun.sh/docs/installation)
+A separate **GUI layer was prototyped with Rork AI**, which helped generate and integrate the interface with these backend modules.
 
-Follow these steps:
+---
+
+## Features
+
+Current console prototype:
+
+- 🔐 **Login as demo users**  
+  Predefined users (e.g. `masih`, `abdelaziz`, `ahmed`, `javier`, `nikolozi`, `zhenyang`) each start with a virtual balance.   
+
+- 🏆 **Leaderboard (Quicksort)**  
+  Users are sorted by total profit using a custom quicksort implementation.   
+
+- 🎲 **Place Bets (1X2)**  
+  Users can place simple bets (Home win / Draw / Away win) on predefined matches with fixed odds and results. Bets update the user’s balance and betting history.   
+
+- 📜 **Betting History**  
+  Each user can view all past bets, including stake, outcome chosen, and whether it was won or lost.   
+
+- 📊 **Team Statistics & Table (Selection Sort)**  
+  A league table is computed from demo stats and sorted by points using **selection sort**, breaking ties alphabetically by team name. :contentReference[oaicite:8]{index=8}  
+
+Planned (conceptual, from project design):
+
+- Weekly budgets and usage alerts  
+- Community features and AI-assisted predictions  
+- More detailed stats and filters for teams and users :contentReference[oaicite:9]{index=9}  
+
+---
+
+## Built With
+
+- **Language:** Python 3  
+- **Paradigm:** Object-Oriented Programming (`User`, `Match`, `Bet` classes) :contentReference[oaicite:10]{index=10}  
+- **Algorithms & Data Structures:**
+  - Quicksort for user leaderboard by profit :contentReference[oaicite:11]{index=11}  
+  - Selection sort for team standings by points :contentReference[oaicite:12]{index=12}  
+  - In-memory dictionaries for users and matches :contentReference[oaicite:13]{index=13}  
+- **Tools:**  
+  - Rork AI – assisted with GUI generation and integration of these Python modules  
+  - (Optional) Any IDE you used: VS Code / PyCharm / etc.
+
+---
+
+## Getting Started
+
+These instructions let you run the **console version** of EdgePlay IE locally.
+
+### Prerequisites
+
+- Python **3.9+** installed  
+- No external packages required (only Python standard library).
+
+You can check your Python version with:
 
 ```bash
-# Step 1: Clone the repository using the project's Git URL.
-git clone <YOUR_GIT_URL>
+python --version
+# or
+python3 --version
+````
 
-# Step 2: Navigate to the project directory.
-cd <YOUR_PROJECT_NAME>
+### Installation
 
-# Step 3: Install the necessary dependencies.
-bun i
-
-# Step 4: Start the instant web preview of your Rork app in your browser, with auto-reloading of your changes
-bun run start-web
-
-# Step 5: Start iOS preview
-# Option A (recommended):
-bun run start  # then press "i" in the terminal to open iOS Simulator
-# Option B (if supported by your environment):
-bun run start -- --ios
-```
-
-### **Edit a file directly in GitHub**
-
-- Navigate to the desired file(s).
-- Click the "Edit" button (pencil icon) at the top right of the file view.
-- Make your changes and commit the changes.
-
-## What technologies are used for this project?
-
-This project is built with the most popular native mobile cross-platform technical stack:
-
-- **React Native** - Cross-platform native mobile development framework created by Meta and used for Instagram, Airbnb, and lots of top apps in the App Store
-- **Expo** - Extension of React Native + platform used by Discord, Shopify, Coinbase, Telsa, Starlink, Eightsleep, and more
-- **Expo Router** - File-based routing system for React Native with support for web, server functions and SSR
-- **TypeScript** - Type-safe JavaScript
-- **React Query** - Server state management
-- **Lucide React Native** - Beautiful icons
-
-## How can I test my app?
-
-### **On your phone (Recommended)**
-
-1. **iOS**: Download the [Rork app from the App Store](https://apps.apple.com/app/rork) or [Expo Go](https://apps.apple.com/app/expo-go/id982107779)
-2. **Android**: Download the [Expo Go app from Google Play](https://play.google.com/store/apps/details?id=host.exp.exponent)
-3. Run `bun run start` and scan the QR code from your development server
-
-### **In your browser**
-
-Run `bun start-web` to test in a web browser. Note: The browser preview is great for quick testing, but some native features may not be available.
-
-### **iOS Simulator / Android Emulator**
-
-You can test Rork apps in Expo Go or Rork iOS app. You don't need XCode or Android Studio for most features.
-
-**When do you need Custom Development Builds?**
-
-- Native authentication (Face ID, Touch ID, Apple Sign In)
-- In-app purchases and subscriptions
-- Push notifications
-- Custom native modules
-
-Learn more: [Expo Custom Development Builds Guide](https://docs.expo.dev/develop/development-builds/introduction/)
-
-If you have XCode (iOS) or Android Studio installed:
-
-```bash
-# iOS Simulator
-bun run start -- --ios
-
-# Android Emulator
-bun run start -- --android
-```
-
-## How can I deploy this project?
-
-### **Publish to App Store (iOS)**
-
-1. **Install EAS CLI**:
+1. **Clone or download** this repository
 
    ```bash
-   bun i -g @expo/eas-cli
+   git clone https://github.com/your-username/edgeplay-ie.git
+   cd edgeplay-ie
    ```
 
-2. **Configure your project**:
+2. Make sure the core files are present:
+
+   * `main.py`
+   * `algorithms.py`
+   * `data_store.py`
+   * `models.py`
+
+3. **Run the app**
 
    ```bash
-   eas build:configure
+   python main.py
+   # or, on some systems:
+   python3 main.py
    ```
 
-3. **Build for iOS**:
+---
 
-   ```bash
-   eas build --platform ios
-   ```
+## Usage
 
-4. **Submit to App Store**:
-   ```bash
-   eas submit --platform ios
-   ```
+When you run `main.py`, you’ll see:
 
-For detailed instructions, visit [Expo's App Store deployment guide](https://docs.expo.dev/submit/ios/).
+1. A list of available demo users (e.g. `masih`, `ahmed`, `javier`, etc.).
+2. Type a username to log in (no password needed in this prototype).
 
-### **Publish to Google Play (Android)**
+On the **home screen**, you can:
 
-1. **Build for Android**:
+* `1` – **Create a bet**
 
-   ```bash
-   eas build --platform android
-   ```
+  * See all matches with odds.
+  * Choose a match ID (e.g. `M1`).
+  * Choose an outcome: `H` (home win), `D` (draw), `A` (away win).
+  * Enter your stake (must be ≤ your balance).
+  * The system settles the bet and updates your balance and history.
 
-2. **Submit to Google Play**:
-   ```bash
-   eas submit --platform android
-   ```
+* `2` – **View my betting history**
 
-For detailed instructions, visit [Expo's Google Play deployment guide](https://docs.expo.dev/submit/android/).
+  * Shows each bet, your chosen outcome, stake, and whether you won or lost. 
 
-### **Publish as a Website**
+* `3` – **View matches**
 
-Your React Native app can also run on the web:
+  * Lists all matches with odds and final results.
 
-1. **Build for web**:
+* `4` – **Team statistics**
 
-   ```bash
-   eas build --platform web
-   ```
+  * Displays a table of teams, games played, wins, draws, losses, and points, sorted by points using selection sort.
 
-2. **Deploy with EAS Hosting**:
-   ```bash
-   eas hosting:configure
-   eas hosting:deploy
-   ```
+* `0` – **Logout / Exit**
 
-Alternative web deployment options:
+After logging out, you can choose to log in again as another user or exit the program.
 
-- **Vercel**: Deploy directly from your GitHub repository
-- **Netlify**: Connect your GitHub repo to Netlify for automatic deployments
-
-## App Features
-
-This template includes:
-
-- **Cross-platform compatibility** - Works on iOS, Android, and Web
-- **File-based routing** with Expo Router
-- **Tab navigation** with customizable tabs
-- **Modal screens** for overlays and dialogs
-- **TypeScript support** for better development experience
-- **Async storage** for local data persistence
-- **Vector icons** with Lucide React Native
+---
 
 ## Project Structure
 
-```
-├── app/                    # App screens (Expo Router)
-│   ├── (tabs)/            # Tab navigation screens
-│   │   ├── _layout.tsx    # Tab layout configuration
-│   │   └── index.tsx      # Home tab screen
-│   ├── _layout.tsx        # Root layout
-│   ├── modal.tsx          # Modal screen example
-│   └── +not-found.tsx     # 404 screen
-├── assets/                # Static assets
-│   └── images/           # App icons and images
-├── constants/            # App constants and configuration
-├── app.json             # Expo configuration
-├── package.json         # Dependencies and scripts
-└── tsconfig.json        # TypeScript configuration
+```text
+edgeplay-ie/
+│
+├─ main.py          # Entry point: CLI, menus, user interaction :contentReference[oaicite:19]{index=19}
+├─ algorithms.py    # Quicksort (leaderboard), bet settlement, team stats, selection sort :contentReference[oaicite:20]{index=20}
+├─ data_store.py    # In-memory demo data for users and matches :contentReference[oaicite:21]{index=21}
+├─ models.py        # Core OOP models: User, Match, Bet :contentReference[oaicite:22]{index=22}
+└─ docs/
+   └─ ADS - Edgeplay IE.pdf   # Original project specification & inception deck :contentReference[oaicite:23]{index=23}
 ```
 
-## Custom Development Builds
+If you are using a separate GUI project generated with Rork AI, you can place it in a `/gui` folder and import these same modules there.
 
-For advanced native features, you'll need to create a Custom Development Build instead of using Expo Go.
+---
 
-### **When do you need a Custom Development Build?**
+## Roadmap
 
-- **Native Authentication**: Face ID, Touch ID, Apple Sign In, Google Sign In
-- **In-App Purchases**: App Store and Google Play subscriptions
-- **Advanced Native Features**: Third-party SDKs, platform-specifc features (e.g. Widgets on iOS)
-- **Background Processing**: Background tasks, location tracking
+* [ ] Add **weekly budget** limits and warnings for responsible use
+* [ ] Store data persistently (e.g. JSON/SQLite) instead of in-memory
+* [ ] Expand **GUI**: full navigation for login, bets, history, leaderboard, team stats
+* [ ] Integrate real API-based stats (while keeping virtual money)
+* [ ] Add simple **AI / rule-based predictions** and show them next to odds
+* [ ] Implement user registration with IE email verification (conceptual requirement from project)
 
-### **Creating a Custom Development Build**
+---
 
-```bash
-# Install EAS CLI
-bun i -g @expo/eas-cli
+## License
 
-# Configure your project for development builds
-eas build:configure
+This project is created **for educational purposes only** as part of a university course.
+It is **not** a real-money gambling platform and should not be used as one.
 
-# Create a development build for your device
-eas build --profile development --platform ios
-eas build --profile development --platform android
+You may adapt and reuse the code for learning, coursework, or personal projects.
 
-# Install the development build on your device and start developing
-bun start --dev-client
+---
+
+## Contact
+
+* **Team:** EdgePlay IE – ADS Project
+* **Main contributors:** Javier Barrera, Ahmed Rachad Belloum, Masih Ghadbeygi, Abdelaziz Moumen, Zhengyang Rao Xu, Nikolozi Jorbenadze
+
+(You can add your personal email and GitHub here, e.g.)
+
+* **Your Name:** Nikolozi Jorbenadze
+* **GitHub:** [@JorbenaN](https://github.com/your-username)
+* **Email:** [njorbenadze.ieu2024@student.ie.edu](mailto:your.email@example.com)
+
+---
+
+## Acknowledgments
+
+* **Rork AI** – for helping generate the GUI and integrate these Python modules into a visual interface.
+* **Google Gemini AI** – for assisting in generating early mockups of the app’s design.
+* **ADS course instructors** – for guidance on algorithms, data structures, and software design.
+* **IE University classmates** – for feedback on the concept and user stories.
+
 ```
 
-**Learn more:**
-
-- [Development Builds Introduction](https://docs.expo.dev/develop/development-builds/introduction/)
-- [Creating Development Builds](https://docs.expo.dev/develop/development-builds/create-a-build/)
-- [Installing Development Builds](https://docs.expo.dev/develop/development-builds/installation/)
-
-## Advanced Features
-
-### **Add a Database**
-
-Integrate with backend services:
-
-- **Supabase** - PostgreSQL database with real-time features
-- **Firebase** - Google's mobile development platform
-- **Custom API** - Connect to your own backend
-
-### **Add Authentication**
-
-Implement user authentication:
-
-**Basic Authentication (works in Expo Go):**
-
-- **Expo AuthSession** - OAuth providers (Google, Facebook, Apple) - [Guide](https://docs.expo.dev/guides/authentication/)
-- **Supabase Auth** - Email/password and social login - [Integration Guide](https://supabase.com/docs/guides/getting-started/tutorials/with-expo-react-native)
-- **Firebase Auth** - Comprehensive authentication solution - [Setup Guide](https://docs.expo.dev/guides/using-firebase/)
-
-**Native Authentication (requires Custom Development Build):**
-
-- **Apple Sign In** - Native Apple authentication - [Implementation Guide](https://docs.expo.dev/versions/latest/sdk/apple-authentication/)
-- **Google Sign In** - Native Google authentication - [Setup Guide](https://docs.expo.dev/guides/google-authentication/)
-
-### **Add Push Notifications**
-
-Send notifications to your users:
-
-- **Expo Notifications** - Cross-platform push notifications
-- **Firebase Cloud Messaging** - Advanced notification features
-
-### **Add Payments**
-
-Monetize your app:
-
-**Web & Credit Card Payments (works in Expo Go):**
-
-- **Stripe** - Credit card payments and subscriptions - [Expo + Stripe Guide](https://docs.expo.dev/guides/using-stripe/)
-- **PayPal** - PayPal payments integration - [Setup Guide](https://developer.paypal.com/docs/checkout/mobile/react-native/)
-
-**Native In-App Purchases (requires Custom Development Build):**
-
-- **RevenueCat** - Cross-platform in-app purchases and subscriptions - [Expo Integration Guide](https://www.revenuecat.com/docs/expo)
-- **Expo In-App Purchases** - Direct App Store/Google Play integration - [Implementation Guide](https://docs.expo.dev/versions/latest/sdk/in-app-purchases/)
-
-**Paywall Optimization:**
-
-- **Superwall** - Paywall A/B testing and optimization - [React Native SDK](https://docs.superwall.com/docs/react-native)
-- **Adapty** - Mobile subscription analytics and paywalls - [Expo Integration](https://docs.adapty.io/docs/expo)
-
-## I want to use a custom domain - is that possible?
-
-For web deployments, you can use custom domains with:
-
-- **EAS Hosting** - Custom domains available on paid plans
-- **Netlify** - Free custom domain support
-- **Vercel** - Custom domains with automatic SSL
-
-For mobile apps, you'll configure your app's deep linking scheme in `app.json`.
-
-## Troubleshooting
-
-### **App not loading on device?**
-
-1. Make sure your phone and computer are on the same WiFi network
-2. Try using tunnel mode: `bun start -- --tunnel`
-3. Check if your firewall is blocking the connection
-
-### **Build failing?**
-
-1. Clear your cache: `bunx expo start --clear`
-2. Delete `node_modules` and reinstall: `rm -rf node_modules && bun install`
-3. Check [Expo's troubleshooting guide](https://docs.expo.dev/troubleshooting/build-errors/)
-
-### **Need help with native features?**
-
-- Check [Expo's documentation](https://docs.expo.dev/) for native APIs
-- Browse [React Native's documentation](https://reactnative.dev/docs/getting-started) for core components
-- Visit [Rork's FAQ](https://rork.com/faq) for platform-specific questions
-
-## About Rork
-
-Rork builds fully native mobile apps using React Native and Expo - the same technology stack used by Discord, Shopify, Coinbase, Instagram, and nearly 30% of the top 100 apps on the App Store.
-
-Your Rork app is production-ready and can be published to both the App Store and Google Play Store. You can also export your app to run on the web, making it truly cross-platform.
+If you’d like, I can also add a short section describing *exactly* how to launch your Rork AI GUI once you tell me what command or file you use to start it.
+::contentReference[oaicite:27]{index=27}
+```
