@@ -113,7 +113,7 @@ export default function HomeScreen() {
                     styles.leaderboardProfit,
                     userProfit >= 0 ? styles.profitPositive : styles.profitNegative,
                   ]}>
-                    {userProfit >= 0 ? "+" : ""}€{userProfit.toFixed(2)}
+                    {userProfit >= 0 ? "+" : "-"}€{Math.abs(userProfit).toFixed(2)}
                   </Text>
                 </View>
               );

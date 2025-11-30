@@ -79,13 +79,18 @@ export const [BettingProvider, useBetting] = createContextHook(() => {
       payout: 0,
     };
 
-    currentUser.balance -= stake;
     settleBet(bet, match);
-    currentUser.balance += bet.payout;
-    currentUser.bets.push(bet);
 
-    setUsers({ ...users });
-    setCurrentUser({ ...currentUser });
+    const newBalance = currentUser.balance - stake + bet.payout;
+    const updatedUser: User = {
+      ...currentUser,
+      balance: newBalance,
+      bets: [...currentUser.bets, bet],
+    };
+
+    const updatedUsers = { ...users, [currentUser.email]: updatedUser };
+    setUsers(updatedUsers);
+    setCurrentUser(updatedUser);
 
     const netProfit = bet.payout - stake;
     if (bet.won) {
