@@ -13,8 +13,14 @@ export const quicksortUsersByProfit = (users: User[]): User[] => {
 
   for (let i = 1; i < users.length; i++) {
     const userProfit = users[i].balance - users[i].startingBalance;
-    if (userProfit >= pivotProfit) {
+    if (userProfit > pivotProfit) {
       left.push(users[i]);
+    } else if (userProfit === pivotProfit) {
+      if (users[i].username < pivot.username) {
+        left.push(users[i]);
+      } else {
+        right.push(users[i]);
+      }
     } else {
       right.push(users[i]);
     }
